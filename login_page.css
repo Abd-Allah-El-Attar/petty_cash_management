@@ -1,0 +1,18 @@
+body {
+    align-items: center;
+}
+
+#logo_and_name{
+    align-items: center;
+}
+
+#login_form {
+    align-content: center;
+    margin-top: 2cm;
+}
+
+
+#manager_name {
+    font-weight: bold;
+    font-size: larger;
+}
