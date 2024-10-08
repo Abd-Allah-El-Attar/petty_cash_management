@@ -1,18 +1,42 @@
+html {
+    height: 100%;
+}
+
 body {
     align-items: center;
-}
-
-#logo_and_name{
+    display: grid;
+    justify-items: center;
     align-items: center;
 }
 
-#login_form {
-    align-content: center;
-    margin-top: 2cm;
+#logo_and_name {
+    align-items: center;
+    margin-left: 5dvb;
+    margin-right: 5dvb;
 }
 
+#login_form_div {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 2dvb;
+    margin-top: 2dvb;
+}
 
 #manager_name {
     font-weight: bold;
     font-size: larger;
+}
+
+.login_field {
+    padding: 0px 0px 5px 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+#incorrect_info_div {
+    color: red;
+    opacity: 0;
 }
