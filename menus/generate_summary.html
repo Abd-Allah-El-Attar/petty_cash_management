@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script defer src="../dashboard_logic.js"></script>
+        <link rel="stylesheet" href="./generate_summary.css">
+        <title>Generate Summary</title>
+    </head>
+
+    <body>
+        <form method="get">
+            <div id="form-div">
+                <label for="project-selector">Project: </label>
+                <select name="project-selector" id="project-select"></select>
+
+                <label for="amount">Amount: </label>
+                <input type="number" name="amount" id="amount-input">
+
+                <label for="beneficiary">Beneficiary: </label>
+                <input type="text" name="beneficiary" id="beneficiary-input">
+
+                <label for="date-from">Date from: </label>
+                <input type="date" name="date-from" id="date-from-input">
+                
+                <label for="date-to">Date to: </label>
+                <input type="date" name="date-to" id="date-to-input">
+            </div>
+        </form>
+
+        <div id="output-buttons-div">
+            <button type="button" id="csv-btn">CSV</button>
+            <button type="button" id="pdf-btn">PDF</button>
+            <button type="button" id="cancel-btn">Cancel</button>
+        </div>
+    </body>
+
+</html>

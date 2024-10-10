@@ -38,5 +38,5 @@ body {
 
 #incorrect_info_div {
     color: red;
-    opacity: 0;
+    display: none;
 }

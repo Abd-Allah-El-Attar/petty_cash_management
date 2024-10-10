@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Expenses Form</title>
+    <link rel="stylesheet" href="./add_expenses.css">
+    <script defer src="./add_expenses.js"></script>
+</head>
+<body>
+    <form id="expenses-form">
+        <div id="form-div">
+            <label for="project-selector">Project: </label>
+            <select name="project-selector" id="project-select"></select>
+
+            <label for="department">Department: </label>
+            <input type="text" name="department" id="department-input">
+
+            <label for="beneficiary">Beneficiary: </label>
+            <input type="text" name="beneficiary" id="beneficiary-input">
+
+            <label for="amount">Amount: </label>
+            <input type="number" name="amount" id="amount-input">
+
+            <label for="description">Description: </label>
+            <input type="text" name="description" id="description-input">
+
+            <label for="date">Date: </label>
+            <input type="date" name="date" id="date-input">
+
+            <label for="receipt">Receipt: </label>
+            <input type="file" name="receipt" id="receipt-input">
+        </div>
+    </form>
+
+    <div id="output-buttons-div">
+        <button type="button" id="submit-btn">Submit</button>
+        <button type="button" id="cancel-btn">Cancel</button>
+    </div>
+</body>
+</html>

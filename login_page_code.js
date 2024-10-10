@@ -28,7 +28,7 @@ loginButton.addEventListener("click", (e) => {
             window.location.href = redirect
         } else {
             // Error message shows up when invalid username / password are given
-            loginErrorMsg.style.opacity = 1;
+            loginErrorMsg.style.display = "block";
         }
     }
 })
