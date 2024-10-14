@@ -8,10 +8,12 @@
     <script defer src="./add_expenses.js"></script>
 </head>
 <body>
-    <form id="expenses-form">
+    <form action="../includes/add_expenses_formhandler.php" id="expenses-form" method="post">
         <div id="form-div">
             <label for="project-selector">Project: </label>
-            <select name="project-selector" id="project-select"></select>
+            <select name="project-selector" id="project-select">
+                <option value="project1">Project 1</option>
+            </select>
 
             <label for="department">Department: </label>
             <input type="text" name="department" id="department-input">
@@ -31,11 +33,13 @@
             <label for="receipt">Receipt: </label>
             <input type="file" name="receipt" id="receipt-input">
         </div>
+
+        <div id="output-buttons-div">
+            <input type="submit" name="Submit" id="submit-btn">
+            <button type="button" id="cancel-btn">Cancel</button>
+        </div>
     </form>
 
-    <div id="output-buttons-div">
-        <button type="button" id="submit-btn">Submit</button>
-        <button type="button" id="cancel-btn">Cancel</button>
-    </div>
+    
 </body>
 </html>
