@@ -14,11 +14,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     try {
         require_once('dbh.inc.php');
 
+        // Query to insert info into database
         $query = "INSERT INTO expenses (project, department, beneficiary, amount, description, 
                   approvers, receipt_date, receipt_img, approval_status) VALUES 
                   (:project, :department, :beneficiary, :amount, :description, 
                   :approvers, :date, :receipt, :approval_status);";
 
+        // Sending query
         $stmt = $pdo->prepare($query);
 
         $stmt->bindParam(":project", $project);
@@ -36,8 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $pdo = null;
         $stmt = null;
 
-        die();
-
     } catch (PDOException $e) {
         die("Query failed: " . $e->getMessage());
     }
@@ -45,3 +45,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 } else {
     echo "<script>window.close();</script>";
 }
+?>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses Added Successfully</title>
+</head>
+<body>
+    <script>
+        alert("Expense Submitted!");
+        window.close();
+    </script>
+</body>

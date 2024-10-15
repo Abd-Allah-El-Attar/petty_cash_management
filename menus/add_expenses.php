@@ -45,7 +45,7 @@
         </div>
 
         <div id="output-buttons-div">
-            <input type="submit" name="Submit" id="submit-btn">
+            <input type="submit" name="submit-btn" id="submit-btn" value="Add">
             <button type="button" id="cancel-btn">Cancel</button>
         </div>
     </form>

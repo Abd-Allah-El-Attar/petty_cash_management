@@ -17,6 +17,15 @@ main {
     margin-bottom: 5dvb;
 }
 
+#expenses-table {
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+td, th {
+    border: 1px solid black;
+}
+
 #balances-div {
     display: grid;
     grid-template-columns: auto auto;

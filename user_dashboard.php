@@ -18,7 +18,18 @@
             </div>
 
             <div id="expenses-table-div">
-                Table
+            <table id="expenses-table">
+                    <th>Project</th>
+                    <th>Department</th>
+                    <!-- <th>Input User</th> -->
+                    <th>Beneficiary</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                    <th>Receipt</th>
+                    <th>Approval Status</th>
+
+                    <?php include_once('./includes/fetch_expenses.php'); ?>
+                </table>
             </div>
 
             <div id="balances-div">
