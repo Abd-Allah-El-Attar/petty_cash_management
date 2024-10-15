@@ -24,7 +24,7 @@ loginButton.addEventListener("click", (e) => {
     for(let username_key in users_dict){
         if (username_key == username && users_dict[username_key].password == password) {
             // Successful login to user or admin dashboard
-            let redirect = (users_dict[username_key].is_admin) ? "./admin_dashboard.html" : "./user_dashboard.html"
+            let redirect = (users_dict[username_key].is_admin) ? "./admin_dashboard.php" : "./user_dashboard.php"
             window.location.href = redirect
         } else {
             // Error message shows up when invalid username / password are given

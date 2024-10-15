@@ -12,7 +12,10 @@
         <div id="form-div">
             <label for="project-selector">Project: </label>
             <select name="project-selector" id="project-select">
-                <option value="project1">Project 1</option>
+                <?php
+                    include_once("../includes/db_dropdowns.php");
+                    addProjectDropdown();
+                ?>
             </select>
 
             <label for="department">Department: </label>
@@ -20,6 +23,13 @@
 
             <label for="beneficiary">Beneficiary: </label>
             <input type="text" name="beneficiary" id="beneficiary-input">
+
+            <label for="approvers">Approvers: </label>
+            <select multiple name="approvers-selector" id="approvers-select">
+                <?php
+                addApproversDropdown();
+                ?>
+            </select>
 
             <label for="amount">Amount: </label>
             <input type="number" name="amount" id="amount-input">
