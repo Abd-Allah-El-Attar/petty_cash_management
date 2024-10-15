@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./generate_summary.css">
-        <script defer src="./generate_summary.js"></script>
+        <link rel="stylesheet" href="./menu_style.css">
+        <script defer src="./menu_logic.js"></script>
         <title>Generate Summary</title>
     </head>
 

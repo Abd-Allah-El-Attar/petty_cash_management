@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Expenses Form</title>
-    <link rel="stylesheet" href="./add_expenses.css">
-    <script defer src="./add_expenses.js"></script>
+    <link rel="stylesheet" href="./menu_style.css">
+    <script defer src="./menu_logic.js"></script>
 </head>
 <body>
     <form action="../includes/add_expenses_formhandler.php" id="expenses-form" method="post">

@@ -18,6 +18,6 @@ add_expenses_btn.addEventListener('click', (e) => {
 // Add project button functionality
 if (add_project_btn != null){
     add_project_btn.addEventListener('click', (e) => {
-        let popup_window = window.open("./menus/add_project.php", "", "width=500,height=300")
+        let popup_window = window.open("./menus/add_projects.php", "", "width=500,height=300")
     })
 }
