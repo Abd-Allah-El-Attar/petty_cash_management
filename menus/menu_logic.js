@@ -9,6 +9,21 @@ cancel_btn.addEventListener('click', (e) => {
     window.close();
 })
 
+let populateExpenseSubtypes = () => fetch("http://localhost/petty_cash_management/includes/expense_types.json")
+.then(response => response.json())
+.then(data => {
+    let expense_subtypes = data[expense_type_selector.value];
+    
+    for(let i in expense_subtypes){
+        let new_option = new Option();
+        let expense_subtype = expense_subtypes[i];
+        new_option.value = expense_subtype;
+        new_option.innerHTML = expense_subtype;
+        expense_subtype_selector.appendChild(new_option);
+        }
+    }
+);
+
 // Add options department menu
 let department_selector = document.getElementById("department-select");
 
@@ -43,32 +58,20 @@ if (expense_type_selector != null && expense_subtype_selector != null){ // Check
             new_option.innerHTML = expense_type;
             expense_type_selector.appendChild(new_option);
             }
+
+        populateExpenseSubtypes();
         }
     );
 
     // Change options based on expense type
     expense_type_selector.addEventListener('change', (e) => {
-        console.log("TRIGGERED");
         // Remove all children of expense subtype selector
         while (expense_subtype_selector.firstChild){
             expense_subtype_selector.lastChild.remove();
         }
-
+        
         // Search in JSON for list of subtypes based on selection type
-        fetch("http://localhost/petty_cash_management/includes/expense_types.json")
-        .then(response => response.json())
-        .then(data => {
-            let expense_subtypes = data[expense_type_selector.value];
-            
-            for(let i in expense_subtypes){
-                let new_option = new Option();
-                let expense_subtype = expense_subtypes[i];
-                new_option.value = expense_subtype;
-                new_option.innerHTML = expense_subtype;
-                expense_subtype_selector.appendChild(new_option);
-                }
-            }
-        )
-    });
+        populateExpenseSubtypes();
+    })
 }
 

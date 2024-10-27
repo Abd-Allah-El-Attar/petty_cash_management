@@ -9,12 +9,7 @@
         <main id="main-div">
             <div id="department-dropdown-div">
                 <label id="department-select-label">Department: </label>
-                <select class="button-styling" id="department-select">
-                    <?php
-                    include_once('./includes/db_dropdowns.php');
-                    addProjectDropdown();
-                    ?>
-                </select>
+                <select class="button-styling" name="department-select" id="department-select"></select>
             </div>
 
             <div id="expenses-table-div">

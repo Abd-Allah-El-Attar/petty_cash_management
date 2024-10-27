@@ -21,3 +21,21 @@ if (add_project_btn != null){
         let popup_window = window.open("./menus/add_projects.php", "", "width=500,height=300")
     })
 }
+
+// Add options to department selector
+let department_selector = document.getElementById("department-select");
+
+fetch("http://localhost/petty_cash_management/includes/departments.json")
+.then(response => response.json())
+.then(data => {
+    if (department_selector != null){
+        let departments = data['departments'];
+        for(let i in departments){
+            let new_option = new Option();
+            let department = departments[i];
+            new_option.value = department;
+            new_option.innerHTML = department;
+            department_selector.appendChild(new_option);
+        }
+    }
+});
