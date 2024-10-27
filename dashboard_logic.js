@@ -12,7 +12,7 @@ generate_summary_btn.addEventListener('click', (e) => {
 
 // Add expenses button functionality
 add_expenses_btn.addEventListener('click', (e) => {
-    let popup_window = window.open("./menus/add_expenses.php", "", "width=500,height=300");
+    let popup_window = window.open("./menus/add_expenses.php", "", "width=500,height=500");
 })
 
 // Add project button functionality

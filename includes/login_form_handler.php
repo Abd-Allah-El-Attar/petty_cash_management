@@ -28,12 +28,19 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             }
             else{
                 $results = $results[0]; // take the first user with given info
+
+                //Save session variables
+                $_SESSION['username'] = $results['username'];
+                $_SESSION['is_admin'] = $results['is_admin'];
+
                 // Input info is correct, login to correct page
                 if($results['is_admin']){
                     header('Location: ../admin_dashboard.php');
+                    exit();
                 }
                 else{
                     header('Location: ../user_dashboard.php');
+                    exit();
                 }
             }
         
@@ -43,5 +50,5 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     }
 }
 else {
-    header("Location: ../login_page.html");
+    header("Location: ../index.html");
 }

@@ -10,8 +10,7 @@ try {
     $stmt->execute();
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-
-    // Creating HTML code for dropdown
+    // Creating HTML table for fetched expenses
     foreach($results as $row){
         echo "<tr class='expense-row' id='expenseid-" .$row['id']. "'>";
 

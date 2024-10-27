@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <?php session_start(); ?>
     <head>
         <script defer src="./dashboard_logic.js"></script>
         <link rel="stylesheet" href="./user_dashboard.css">
@@ -16,7 +17,6 @@
             <table id="expenses-table">
                     <th>Project</th>
                     <th>Department</th>
-                    <!-- <th>Input User</th> -->
                     <th>Beneficiary</th>
                     <th>Amount</th>
                     <th>Description</th>

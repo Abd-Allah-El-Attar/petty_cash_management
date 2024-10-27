@@ -14,9 +14,8 @@ let populateExpenseSubtypes = () => fetch("http://localhost/petty_cash_managemen
 .then(data => {
     let expense_subtypes = data[expense_type_selector.value];
     
-    for(let i in expense_subtypes){
+    for(let expense_subtype of expense_subtypes){
         let new_option = new Option();
-        let expense_subtype = expense_subtypes[i];
         new_option.value = expense_subtype;
         new_option.innerHTML = expense_subtype;
         expense_subtype_selector.appendChild(new_option);
@@ -32,11 +31,10 @@ fetch("http://localhost/petty_cash_management/includes/departments.json")
 .then(data => {
     if (department_selector != null){
         let departments = data['departments'];
-        for(let i in departments){
+        for(let dep of departments){
             let new_option = new Option();
-            let department = departments[i];
-            new_option.value = department;
-            new_option.innerHTML = department;
+            new_option.value = dep;
+            new_option.innerHTML = dep;
             department_selector.appendChild(new_option);
         }
     }
@@ -51,14 +49,14 @@ if (expense_type_selector != null && expense_subtype_selector != null){ // Check
     .then(response => response.json())
     .then(data => {
         let expense_types = Object.keys(data);
-        for(let i in expense_types){
+        for(let expense_type of expense_types){
             let new_option = new Option();
-            let expense_type = expense_types[i];
             new_option.value = expense_type;
             new_option.innerHTML = expense_type;
             expense_type_selector.appendChild(new_option);
             }
 
+        // Search in JSON for list of subtypes based on selection type
         populateExpenseSubtypes();
         }
     );
