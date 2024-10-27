@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./menu_style.css">
-        <script defer src="./menu_logic.js"></script>
+        <script type="module" defer src="./menu_logic.js"></script>
         <title>Add Project</title>
     </head>
 
@@ -16,6 +16,9 @@
                 
                 <label for="project-code">Project Code: </label>
                 <input type="text" name="project-code" id="project-code-input">
+
+                <label for="department">Department: </label>
+                <select name="department" id="department-select"></select>
 
                 <label for="description">Description: </label>
                 <input type="text" name="description" id="description-input">

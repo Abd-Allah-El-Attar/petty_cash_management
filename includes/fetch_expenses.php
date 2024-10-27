@@ -13,7 +13,7 @@ try {
 
     // Creating HTML code for dropdown
     foreach($results as $row){
-        echo "<tr>";
+        echo "<tr class='expense-row' id='expenseid-" .$row['id']. "'>";
 
         echo "<td>" .$row['project']. "</td>";
         echo "<td>" .$row['department']. "</td>";

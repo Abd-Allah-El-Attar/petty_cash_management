@@ -2,7 +2,7 @@
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $project = $_POST['project'];
-    $project_code = $_POST['project_code'];
+    $project_code = $_POST['project-code'];
     $description = $_POST['description'];
 
     try {
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 </head>
 <body>
     <script>
-        alert("Expense Submitted!");
+        alert("Project Added!");
         window.close();
     </script>
 </body>

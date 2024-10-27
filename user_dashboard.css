@@ -32,10 +32,11 @@ td, th {
     margin: 0px 0px 5px 5px;
 }
 
-#project-dropdown-div {
+#department-dropdown-div {
     justify-items: left;
     position: relative;
     display: inline-block;
+    margin-bottom: 2dvb;
 }
 
 #bottom-buttons-div {

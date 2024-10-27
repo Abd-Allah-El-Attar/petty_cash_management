@@ -11,6 +11,10 @@
     <body>
         <form action="../includes/generate_summary_formhandler.php" method="post">
             <div id="form-div">
+
+                <label for="department">Department: </label>
+                <select name="department" id="department-select"></select>
+
                 <label for="project-selector">Project: </label>
                 <!-- <select name="project-selector" id="project-select"></select> -->
                 <select name="project-selector" id="project-select">

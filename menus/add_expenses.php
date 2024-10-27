@@ -10,6 +10,17 @@
 <body>
     <form action="../includes/add_expenses_formhandler.php" id="expenses-form" method="post">
         <div id="form-div">
+            
+            <div id="topup-radio-div">
+                <input type="radio" name="topup-expense-radio" id="topup-radio" value="Topup">
+                <label for="topup-radio">Topup</label>
+            </div>
+            
+            <div id="expense-radio-div">
+                <input type="radio" name="topup-expense-radio" id="expense-radio" value="Expense">
+                <label for="expense-radio">Expense</label>
+            </div>
+
             <label for="project-selector">Project: </label>
             <select name="project-selector" id="project-select">
                 <?php
@@ -19,7 +30,13 @@
             </select>
 
             <label for="department">Department: </label>
-            <input type="text" name="department" id="department-input">
+            <select name="department" id="department-select"></select>
+
+            <label for="expense-type">Expense Type: </label>
+            <div>
+                <select name="expense-type" id="expense-type-select"></select>
+                <select name="expense-subtype" id="expense-subtype-select"></select>
+            </div>
 
             <label for="beneficiary">Beneficiary: </label>
             <input type="text" name="beneficiary" id="beneficiary-input">

@@ -1,0 +1,7 @@
+{
+    "Project Expenses": ["Spare Parts", "Equipment", "Material", "Labour", "Manlift", "Truck", "TMA", "Food", "Transportation", "Shipping Costs", "Other"],
+    "Office Expenses": ["Shipping Costs", "Visa Renewal", "Medical Expenses", "Consumables", "Assets", "Hospitality", "Other"],
+    "General Expenses": ["Shipping Costs", "Visa Renewal", "Medical Expenses", "Consumables", "Assets", "Hospitality", "Other"],
+    "Operation Expenses": ["Other"],
+    "Vehicle Expenses": ["Car Wash", "Car Repair", "Car Inspection (Fahes)", "Parking Fees", "Transportation", "Fuel", "Other"]
+}

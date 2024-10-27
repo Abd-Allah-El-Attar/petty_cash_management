@@ -7,9 +7,9 @@
 
     <body>
         <main id="main-div">
-            <div id="project-dropdown-div">
-                <label id="project-select-label">Project: </label>
-                <select class="button-styling" id="project-select">
+            <div id="department-dropdown-div">
+                <label id="department-select-label">Department: </label>
+                <select class="button-styling" id="department-select">
                     <?php
                     include_once('./includes/db_dropdowns.php');
                     addProjectDropdown();
